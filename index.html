@@ -31,7 +31,9 @@
     </script>
       <script type="text/javascript">
         jQuery(function($) {
-          $("video").lazy();
+            if($(window).width()>950){
+                $("video").lazy();
+            }
         });
       </script>
 </head>
