@@ -1,24 +1,27 @@
 <html>
-  <body>
+  <head>
+    <title>TEST</title>
+    <script src="jquery-latest.js"></script>
+    <script type="text/javascript" src="jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="jquery.lazy.av.min.js"></script>
 
-    <h1>HELLO WORLD</h1>
-    <img
-      data-lazysrc="http://www.amazingjokes.com/images/20140902-amazingjokes-title.png"
-    />
     <script>
-      function ReLoadImages() {
-        $("img[data-lazysrc]").each(function() {
-          //* set the img src from data-src
-          $(this).attr("src", $(this).attr("data-lazysrc"));
-        });
-      }
-
-      document.addEventListener("readystatechange", event => {
-        if (event.target.readyState === "interactive") {
-          //or at "complete" if you want it to execute in the most last state of window.
-          ReLoadImages();
-        }
+      $(function() {
+        $(".lazy").Lazy();
       });
     </script>
-  </body>
+      </body>
+      <script type="text/javascript">
+        jQuery(function($) {
+          $("video").lazy();
+        });
+      </script>
+  </head>
+  <body>
+    <img class="lazy" data-src="./media/logo.png" />
+    <video autoplay muted loop>
+        <data-src src="./Media/KAFFESALONEN.mp4" type="video/mp4"></data-src>
+      </video>
+
+</body>
 </html>
