@@ -1,25 +1,528 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="./normalize.css">
-        <title>THE ENGLISH VERSION IS UNDER CONCTRUCTION</title>
-    </head>
-    <body>
-        <div>
-            <h1>THIS IS UNDER CONSTRUCTION</h1>
-        </div>
-    </body>
 
-    <style>
-        body{
-            background-image: url('./Media/underconstruction.gif');
+<head>
+    <title>Kaffesalonen ved søerne</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="UTF-8">
+    <html lang="en">
+    <meta name="description"
+        content="Kaffesalonen ved søerne - Lækker cafe med pavillon ude på søen, samt udlejning af svaner og cykelbåde">
+    <meta name="keywords"
+        content="Kaffesalonen, svaner, søerne, nørrebro, nørrebrogade, restauranter, svaner, cykelbåde">
+    <meta name="author" content="Anton Tobias Jensen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" type="text/css" href="./normalize.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--Navbar-->
+
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active"><img src="./Media/logo.png"></img></a>
+        <a href="#menu">Menu</a>
+        <a href="#cafe">Cafe</a>
+        <a href="#pavilion">Pavilion</a>
+        <a href="#svaner">Swans</a>
+        <a href="#kontakt">Contact</a>
+        <a href="./index.html" class="flagIcon"><img src="./Media/dk.png" /><p class="textForSmallMenu">Dansk</p></a>
+        <a href="#" class="flagIcon"><img src="./Media/uk.png" /><p class="textForSmallMenu">English</p></a>
+        <a href="https://www.facebook.com/kaffesalonen/" target="_blank" class="fa fa-facebook"><p class="textForSmallMenu">Facebook</p></a>
+        <a href="https://www.instagram.com/kaffesalonen/" target="_blank" class="fa fa-instagram"><p class="textForSmallMenu">Instagram</p></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!--Forside-->
+    <div class="videoContainer">
+        <video autoplay muted loop class="backgroundVideo">
+            <source src="./Media/KAFFESALONEN.mp4" type="video/mp4">
+            <img src="./Media/nonvideo.jpg"></img>
+        </video>
+    </div>
+
+    <div class="bookTableButtonVideo">
+        <a onclick="openTableNav()">
+            <img src="./Media/BookBordENG.png"></img>
+        </a>
+
+    </div>
+
+    <!--Mad drinks-->
+    <div class="foodAndDrinks" id="menu">
+        <div class="foodBox">
+            <div class="foodAndDrinksContainer" style="background-image: url('./Media/images/mad.jpg');">
+                <a class="foodAndDrinksButton" href="./Media/menusmall.png" target="_blank">
+                    <div>
+                        <p>Food</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="drinksBox">
+            <div class="foodAndDrinksContainer" style="background-image: url('./Media/images/drinks.jpg');">
+                <a class="foodAndDrinksButton" href="./Media/drinkssmall.png" target="_blank">
+                    <div>
+                        <p>Drinks</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Cafe-->
+    <div style="height: 1px; padding-top:-1px;" id="cafe"></div>
+    <div class="box">
+        <div class="imageTextIMG" style="background-image: url('./Media/images/cafe.jpg');"></div>
+        <div class="textbox">
+            <h1 id="imageTextH1">Cafe</h1>
+            <p id="imageTextP">
+                Kaffesalonen kan tilbyde dig en fantastisk hyggelig stemning, gode råvarer og en helt unik placering.
+                Vi har et erfarent køkken, der kan lave mange klassiske cafe-retter, som serveres i København.
+                <br>
+                <br>
+                Kaffen er leveret fra en lokal colombiansk kaffebonde, som sikrer du får én af de bedste
+                kaffesmagsnuancer i København.
+        </div>
+    </div>
+
+    <div class="boxPhone">
+        <div class="imageTextIMG" style="background-image: url('./Media/images/cafe.jpg');"></div>
+        <div class="textbox">
+            <h1 id="imageTextH1">Cafe</h1>
+            <p id="imageTextP">
+                Kaffesalonen kan tilbyde dig en fantastisk hyggelig stemning, gode råvarer og en helt unik placering.
+                Vi har et erfarent køkken, der kan lave mange klassiske cafe-retter, som serveres i København.
+                <br>
+                <br>
+                Kaffen er leveret fra en lokal colombiansk kaffebonde, som sikrer du får én af de bedste
+                kaffesmagsnuancer i København. </p>
+        </div>
+    </div>
+
+    <!--Pavilion-->
+    <div style="height: 1px; margin-top:-1px;" id="pavilion"></div>
+    <div class="box">
+        <div class="textbox">
+            <h1 id="imageTextH1">Pavillonen</h1>
+            <p id="imageTextP">
+                Vores pavillon er arkitekttegnet, og den er designet således, at alle vores gæster har en fantastisk
+                udsigt når de sidder på peblingesøen og nyder sit lækre måltid.
+                <br>
+                <br>
+                Desuden kan vores placering nydes selv i regnen, og det skaber en helt utrolig hyggelig stemning når man
+                sidder på søen under vores pavillon.</p>
+        </div>
+        <div class="imageTextIMG" style="background-image: url('./Media/images/pavillionen.jpg');"></div>
+    </div>
+
+    <div class="boxPhone">
+        <div class="imageTextIMG" style="background-image: url('./Media/images/pavillionen.jpg');"></div>
+        <div class="textbox">
+            <h1 id="imageTextH1">Pavillonen</h1>
+            <p id="imageTextP">
+                Vores pavillon er arkitekttegnet, og den er designet således, at alle vores gæster har en fantastisk
+                udsigt når de sidder på peblingesøen og nyder sit lækre måltid.
+                <br>
+                <br>
+                Desuden kan vores placering nydes selv i regnen, og det skaber en helt utrolig hyggelig stemning når man
+                sidder på søen under vores pavillon.</p>
+
+            </p>
+        </div>
+    </div>
+    <!--Social Features and maps-->
+
+
+    <div class="socialAndMaps">
+        <div id="googleMap" style="width:100%;height:600px;">
+
+        </div>
+        <div class="social">
+
+        </div>
+    </div>
+
+    <!--Svaner-->
+    <div style="height: 1px; margin-top:-1px;" id="svaner"></div>
+    <div class="box">
+        <div class="imageTextIMG" style="background-image: url('./Media/images/svaner.jpg');"></div>
+        <div class="textbox">
+            <h1 id="imageTextH1">Svaner og Cykelbåde</h1>
+            <p id="imageTextP">
+                De fleste af vores gæster husker os for vores unikke placering, men også den sjove mulighed vi tilbyder,
+                ved at man kan bruge vores “vandcykler”.
+                <br>
+                <br>
+                Hvis i er et selskab på 4 eller mere, så book jeres vandcykel her: booking@kaffesalonen.dk</p>
+
+
+            <div class="boatPricesContainer">
+                <a onclick="openBoatNav()">
+                    <div class="bookTableButton">
+                        Priser
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="boxPhone">
+        <div class="imageTextIMG" style="background-image: url('./Media/images/svaner.jpg');"></div>
+        <div class="textbox">
+            <h1 id="imageTextH1">Svaner og Cykelbåde</h1>
+            <p id="imageTextP">
+                    De fleste af vores gæster husker os for vores unikke placering, men også den sjove mulighed vi tilbyder,
+                    ved at man kan bruge vores “vandcykler”.
+                    <br>
+                    <br>
+                    Hvis i er et selskab på 4 eller mere, så book jeres vandcykel her: booking@kaffesalonen.dk</p>
+    
+    
+                <div class="boatPricesContainer">
+                    <a onclick="openBoatNav()">
+                        <div class="bookTableButton">
+                            Priser
+                        </div>
+                    </a>
+                </div>
+            </p>
+        </div>
+    </div>
+
+    <!--Festlokaler-->
+    <div class="box">
+        <div class="textbox">
+            <h1 id="imageTextH1">Festlokaler</h1>
+            <p id="imageTextP">
+                Vi kan også tilbyde dig at holde dit næste familiearrangement, højtidelighed eller firmaarrangementer
+                for den sags skyld hvis du ønsker.
+                <br>
+                I vores festlokale har vi plads til lidt over 60 gæster, og det er tilgængeligt hele året rundt.
+                Efter aftale med vores dygtige køkkenchef kan vi servere det mad i har lyst til.
+                <br>
+                <br>
+
+                Kontakt os på denne mail: festlokaler@kaffesalonen.dk
+            </p>
+        </div>
+        <div class="imageTextIMG" style="background-image: url('./Media/images/festlokaler.jpg');"></div>
+    </div>
+
+    <div class="boxPhone">
+        <div class="imageTextIMG" style="background-image: url('./Media/images/festlokaler.jpg');"></div>
+        <div class="textbox">
+            <h1 id="imageTextH1">Festlokaler</h1>
+            <p id="imageTextP">
+                    Vi kan også tilbyde dig at holde dit næste familiearrangement, højtidelighed eller firmaarrangementer
+                    for den sags skyld hvis du ønsker.
+                    <br>
+                    I vores festlokale har vi plads til lidt over 60 gæster, og det er tilgængeligt hele året rundt.
+                    Efter aftale med vores dygtige køkkenchef kan vi servere det mad i har lyst til.
+                    <br>
+                    <br>
+    
+                    Kontakt os på denne mail: festlokaler@kaffesalonen.dk
+            </p>
+        </div>
+    </div>
+
+
+    <!--Job-->
+    <div class="box">
+        <div class="imageTextIMG" style="background-image: url('./Media/images/job.jpg');"></div>
+        <div class="textbox">
+            <h1 id="imageTextH1">Job</h1>
+            <p id="imageTextP">
+                På Københavns mest unikke placering hvor du kan nyde lækker mad og drikke eller prøve vores sjove
+                vandcykler, søger vi altid de bedst egnede personer, der er sultne efter at give en rar service til
+                vores fantastiske gæster.
+                <br>
+                <br>
+
+                Du får en god og grundig oplæring hos os.
+                <br>
+                <br>
+                Kontakt os på: job@kaffesalonen.dk 
+            </p>
+        </div>
+    </div>
+    <div class="boxPhone">
+        <div class="imageTextIMG" style="background-image: url('./Media/images/job.jpg');"></div>
+        <div class="textbox">
+            <h1 id="imageTextH1">Job</h1>
+            <p id="imageTextP">
+                    På Københavns mest unikke placering hvor du kan nyde lækker mad og drikke eller prøve vores sjove
+                    vandcykler, søger vi altid de bedst egnede personer, der er sultne efter at give en rar service til
+                    vores fantastiske gæster.
+                    <br>
+                    <br>
+    
+                    Du får en god og grundig oplæring hos os.
+                    <br>
+                    <br>
+                    Kontakt os på: job@kaffesalonen.dk 
+            </p>
+        </div>
+    </div>
+    <!--To top button-->
+
+    <div class="bookTableElement">
+        <a onclick="openTableNav()">
+            <div class="bookTableButton">
+                Book table
+            </div>
+        </a>
+    </div>
+
+
+    <!--footer-->
+    <div style="height: 1px; margin-top:-1px;" id="kontakt"></div>
+    <div class="footerComponent">
+        <div class="contactInformation">
+            <h3>Contact</h3>
+            <p><a href="tel:+4535351219" style="text-decoration: none; color:#fdffff;">+ 45 3535 1219</a></p>
+            <p><a href="mailto:booking@kaffesalonen.com"
+                    style="text-decoration: none; color:#fdffff;">booking@kaffesalonen.com</a></p>
+            <h3>Opening hours</h3>
+            <p>Fre-Sat: 8:00-24:00</p>
+            <p>Sat-Sun: 10:00-24:00</p>
+            <h3>Address</h3>
+            <address>
+                <p>Peblinge Dossering 7</p>
+                <p>2200 København</p>
+            </address>
+        </div>
+        <div class="mapsInformation">
+            <div id="googleMap2" style="width:100%;height:250px;"></div>
+
+            <!--
+                     <iframe width="100%" height="250" id="gmap_canvas"
+                src="https://maps.google.com/maps?q=kaffesalonen&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
+                -->
+
+        </div>
+
+    </div>
+
+    <div id="bookTablePopUp" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeTableNav()">&times;</a>
+        <iframe src="https://book.easytablebooking.com/book/?plain=1&id=59ac7&lang=da" frameborder="0">
+        </iframe>
+    </div>
+
+    <div id="seeCykleBoatPrices" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeBoatNav()">&times;</a>
+        <div class="boatPriceses">
+            <h1>Priser</h1>
+            <p>Svanecykel til 2 personer koster 100,- kr. pr. 1/2 time.</p>
+            <p>Svanecykel til 2 personer koster 150,- kr. pr. 1 time.</p>
+            <br>
+            <p>Store vandcykler til 4 voksne koster 150,- kr. pr. ½ time.</p>
+            <p>Store vandcykler til 4 voksne koster 200,- kr. pr. 1 time.</p>
+            <br>
+            <p>Store vandcykler til 5 voksne koster 200,- kr. pr. ½ time.</p>
+            <p>Store vandcykler til 5 voksne koster 250,- kr. pr. 1 time.</p>
+            <br>
+            <br>
+            <p>Vandcyklerne lejes i Pavillon Bar eller i Kaffesalonen.</p>
+            <p>Bådudlejningen i Pavillon Bar har åbent fra kl. 10:00 til kl. ca. 21:00 alle ugens dage.</p>
+
+            </p>
+        </div>
+        </iframe>
+    </div>
+
+
+    <script>
+        function openTableNav() {
+            document.getElementById("bookTablePopUp").style.height = "100%";
         }
-        div{
-            background-color: white;
+
+        function closeTableNav() {
+            document.getElementById("bookTablePopUp").style.height = "0%";
         }
-        h1{
-            text-align: center;
-            color: black;
+    </script>
+    <script>
+        function openBoatNav() {
+            document.getElementById("seeCykleBoatPrices").style.height = "100%";
         }
-    </style>
+
+        function closeBoatNav() {
+            document.getElementById("seeCykleBoatPrices").style.height = "0%";
+        }
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    <script>
+        function myMap() {
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(55.686547, 12.561565),
+                title: "Kaffesalonen"
+            });
+            var marker1 = new google.maps.Marker({
+                position: new google.maps.LatLng(55.686547, 12.561565),
+                title: "Kaffesalonen"
+            });
+            var mapProp = {
+                center: new google.maps.LatLng(55.686726, 12.561701),
+                zoom: 14,
+                disableDefaultUI: true,
+                styles:
+                    [
+                        {
+                            "featureType": "administrative",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "saturation": "-100"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative.province",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "saturation": -100
+                                },
+                                {
+                                    "lightness": 65
+                                },
+                                {
+                                    "visibility": "on"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "saturation": -100
+                                },
+                                {
+                                    "lightness": "50"
+                                },
+                                {
+                                    "visibility": "simplified"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "saturation": "-100"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "visibility": "simplified"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "lightness": "30"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "lightness": "40"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "transit",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "saturation": -100
+                                },
+                                {
+                                    "visibility": "simplified"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "hue": "#ffff00"
+                                },
+                                {
+                                    "lightness": -25
+                                },
+                                {
+                                    "saturation": -97
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels",
+                            "stylers": [
+                                {
+                                    "lightness": -25
+                                },
+                                {
+                                    "saturation": -100
+                                }
+                            ]
+                        }
+                    ]
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            marker.setMap(map);
+
+            var map2 = new google.maps.Map(document.getElementById("googleMap2"), mapProp);
+            marker1.setMap(map2);
+
+        }
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWr1ZVcFkl-OUhq3OFH6Oh4Xm2UepDp_E&callback=myMap"></script>
+
+</body>
+
 </html>

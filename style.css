@@ -99,7 +99,7 @@
 }
 
 .bookTableButtonVideo{
-    margin-top: 250px;
+    margin-top: 15%;
     width: 100%;
     padding: 0px;
     border: 0px;
@@ -128,7 +128,7 @@
 
 /*food and drinks*/
 .foodAndDrinks{
-    padding-top: 300px;
+    padding-top: 15%;
     height: 400px;
     display: flex;
 }
@@ -225,10 +225,13 @@
 }
 
 .textbox h1{
-    padding:10px;
+    padding-left:5%;
+    padding-right:5%;
+
 }
 .textbox p{
-    padding:10px;
+    padding-left:5%;
+    padding-right:5%;
 }
 
 
