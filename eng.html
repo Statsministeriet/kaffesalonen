@@ -18,6 +18,22 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--Jquery for lazy loading-->
+        <script src="jquery-latest.js"></script>
+        <script type="text/javascript" src="jquery.lazy.min.js"></script>
+        <script type="text/javascript" src="jquery.lazy.av.min.js"></script>
+    
+        <script>
+          $(function() {
+            $(".lazy").Lazy();
+          });
+        </script>
+          <script type="text/javascript">
+            jQuery(function($) {
+              $("video").lazy();
+            });
+          </script>
 </head>
 
 <body>
@@ -38,146 +54,123 @@
             <i class="fa fa-bars"></i>
         </a>
     </div>
-
     <!--Forside-->
     <div class="videoContainer">
-        <video autoplay muted loop class="backgroundVideo">
-            <source src="./Media/KAFFESALONEN.mp4" type="video/mp4">
-            <img src="./Media/nonvideo.jpg"></img>
-        </video>
-    </div>
-
-    <div class="bookTableButtonVideo">
-        <a onclick="openTableNav()">
-            <img src="./Media/BookBordENG.png"></img>
-        </a>
-
-    </div>
-
-    <!--Mad drinks-->
-    <div class="foodAndDrinks" id="menu">
-        <div class="foodBox">
-            <div class="foodAndDrinksContainer" style="background-image: url('./Media/images/mad.jpg');">
-                <a class="foodAndDrinksButton" href="./Media/menusmall.png" target="_blank">
-                    <div>
-                        <p>Food</p>
-                    </div>
-                </a>
+            <video autoplay muted loop class="backgroundVideo">
+            <data-src src="./Media/KAFFESALONEN.mp4" type="video/mp4"></data-src>
+            </video>
+        </div>
+    
+        <div class="bookTableButtonVideo">
+            <a onclick="openTableNav()">
+                <img src="./Media/BookBord.png"></img>
+            </a>
+    
+        </div>
+    
+        <!--Mad drinks-->
+        <div class="foodAndDrinks" id="menu">
+            <div class="foodBox">
+                <div class="lazy" id="foodAndDrinksContainer" data-src="./Media/images/mad.jpg">
+                    <a class="foodAndDrinksButton" href="./Media/menusmall.png" target="_blank">
+                        <div>
+                            <p>Mad</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="drinksBox">
+                <div class="lazy" id="foodAndDrinksContainer" data-src="./Media/images/drinks.jpg">
+                    <a class="foodAndDrinksButton" href="./Media/drinkssmall.png" target="_blank">
+                        <div>
+                            <p>Drinks</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!--Cafe-->
+        <div style="height: 1px; padding-top:-1px;" id="cafe"></div>
+        <div class="box">
+            <div class="lazy" id="imageTextIMG" data-src="./Media/images/cafe.jpg"></div>
+            <div class="textbox">
+                <h1 id="imageTextH1">Cafe</h1>
+                <p id="imageTextP">
+                    Kaffesalonen kan tilbyde dig en fantastisk hyggelig stemning, gode råvarer og en helt unik placering.
+                    Vi har et erfarent køkken, der kan lave mange klassiske cafe-retter, som serveres i København.
+                    <br>
+                    <br>
+                    Kaffen er leveret fra en lokal colombiansk kaffebonde, som sikrer du får én af de bedste
+                    kaffesmagsnuancer i København.
             </div>
         </div>
-        <div class="drinksBox">
-            <div class="foodAndDrinksContainer" style="background-image: url('./Media/images/drinks.jpg');">
-                <a class="foodAndDrinksButton" href="./Media/drinkssmall.png" target="_blank">
-                    <div>
-                        <p>Drinks</p>
-                    </div>
-                </a>
+    
+        <div class="boxPhone">
+            <div class="lazy" id="imageTextIMG" data-src="./Media/images/cafe.jpg"></div>
+            <div class="textbox">
+                <h1 id="imageTextH1">Cafe</h1>
+                <p id="imageTextP">
+                    Kaffesalonen kan tilbyde dig en fantastisk hyggelig stemning, gode råvarer og en helt unik placering.
+                    Vi har et erfarent køkken, der kan lave mange klassiske cafe-retter, som serveres i København.
+                    <br>
+                    <br>
+                    Kaffen er leveret fra en lokal colombiansk kaffebonde, som sikrer du får én af de bedste
+                    kaffesmagsnuancer i København. </p>
             </div>
         </div>
-
-    </div>
-
-    <!--Cafe-->
-    <div style="height: 1px; padding-top:-1px;" id="cafe"></div>
-    <div class="box">
-        <div class="imageTextIMG" style="background-image: url('./Media/images/cafe.jpg');"></div>
-        <div class="textbox">
-            <h1 id="imageTextH1">Cafe</h1>
-            <p id="imageTextP">
-                Kaffesalonen kan tilbyde dig en fantastisk hyggelig stemning, gode råvarer og en helt unik placering.
-                Vi har et erfarent køkken, der kan lave mange klassiske cafe-retter, som serveres i København.
-                <br>
-                <br>
-                Kaffen er leveret fra en lokal colombiansk kaffebonde, som sikrer du får én af de bedste
-                kaffesmagsnuancer i København.
+    
+        <!--Pavilion-->
+        <div style="height: 1px; margin-top:-1px;" id="pavilion"></div>
+        <div class="box">
+            <div class="textbox">
+                <h1 id="imageTextH1">Pavillonen</h1>
+                <p id="imageTextP">
+                    Vores pavillon er arkitekttegnet, og den er designet således, at alle vores gæster har en fantastisk
+                    udsigt når de sidder på peblingesøen og nyder sit lækre måltid.
+                    <br>
+                    <br>
+                    Desuden kan vores placering nydes selv i regnen, og det skaber en helt utrolig hyggelig stemning når man
+                    sidder på søen under vores pavillon.</p>
+            </div>
+            <div class="lazy" id="imageTextIMG" data-src="./Media/images/pavillionen.jpg"></div>
         </div>
-    </div>
-
-    <div class="boxPhone">
-        <div class="imageTextIMG" style="background-image: url('./Media/images/cafe.jpg');"></div>
-        <div class="textbox">
-            <h1 id="imageTextH1">Cafe</h1>
-            <p id="imageTextP">
-                Kaffesalonen kan tilbyde dig en fantastisk hyggelig stemning, gode råvarer og en helt unik placering.
-                Vi har et erfarent køkken, der kan lave mange klassiske cafe-retter, som serveres i København.
-                <br>
-                <br>
-                Kaffen er leveret fra en lokal colombiansk kaffebonde, som sikrer du får én af de bedste
-                kaffesmagsnuancer i København. </p>
-        </div>
-    </div>
-
-    <!--Pavilion-->
-    <div style="height: 1px; margin-top:-1px;" id="pavilion"></div>
-    <div class="box">
-        <div class="textbox">
-            <h1 id="imageTextH1">Pavillonen</h1>
-            <p id="imageTextP">
-                Vores pavillon er arkitekttegnet, og den er designet således, at alle vores gæster har en fantastisk
-                udsigt når de sidder på peblingesøen og nyder sit lækre måltid.
-                <br>
-                <br>
-                Desuden kan vores placering nydes selv i regnen, og det skaber en helt utrolig hyggelig stemning når man
-                sidder på søen under vores pavillon.</p>
-        </div>
-        <div class="imageTextIMG" style="background-image: url('./Media/images/pavillionen.jpg');"></div>
-    </div>
-
-    <div class="boxPhone">
-        <div class="imageTextIMG" style="background-image: url('./Media/images/pavillionen.jpg');"></div>
-        <div class="textbox">
-            <h1 id="imageTextH1">Pavillonen</h1>
-            <p id="imageTextP">
-                Vores pavillon er arkitekttegnet, og den er designet således, at alle vores gæster har en fantastisk
-                udsigt når de sidder på peblingesøen og nyder sit lækre måltid.
-                <br>
-                <br>
-                Desuden kan vores placering nydes selv i regnen, og det skaber en helt utrolig hyggelig stemning når man
-                sidder på søen under vores pavillon.</p>
-
-            </p>
-        </div>
-    </div>
-    <!--Social Features and maps-->
-
-
-    <div class="socialAndMaps">
-        <div id="googleMap" style="width:100%;height:600px;">
-
-        </div>
-        <div class="social">
-
-        </div>
-    </div>
-
-    <!--Svaner-->
-    <div style="height: 1px; margin-top:-1px;" id="svaner"></div>
-    <div class="box">
-        <div class="imageTextIMG" style="background-image: url('./Media/images/svaner.jpg');"></div>
-        <div class="textbox">
-            <h1 id="imageTextH1">Svaner og Cykelbåde</h1>
-            <p id="imageTextP">
-                De fleste af vores gæster husker os for vores unikke placering, men også den sjove mulighed vi tilbyder,
-                ved at man kan bruge vores “vandcykler”.
-                <br>
-                <br>
-                Hvis i er et selskab på 4 eller mere, så book jeres vandcykel her: booking@kaffesalonen.dk</p>
-
-
-            <div class="boatPricesContainer">
-                <a onclick="openBoatNav()">
-                    <div class="bookTableButton">
-                        Priser
-                    </div>
-                </a>
+    
+        <div class="boxPhone">
+            <div class="lazy" id="imageTextIMG" data-src="./Media/images/pavillionen.jpg"></div>
+            <div class="textbox">
+                <h1 id="imageTextH1">Pavillonen</h1>
+                <p id="imageTextP">
+                    Vores pavillon er arkitekttegnet, og den er designet således, at alle vores gæster har en fantastisk
+                    udsigt når de sidder på peblingesøen og nyder sit lækre måltid.
+                    <br>
+                    <br>
+                    Desuden kan vores placering nydes selv i regnen, og det skaber en helt utrolig hyggelig stemning når man
+                    sidder på søen under vores pavillon.</p>
+    
+                </p>
             </div>
         </div>
-    </div>
-    <div class="boxPhone">
-        <div class="imageTextIMG" style="background-image: url('./Media/images/svaner.jpg');"></div>
-        <div class="textbox">
-            <h1 id="imageTextH1">Svaner og Cykelbåde</h1>
-            <p id="imageTextP">
+        <!--Social Features and maps-->
+    
+    
+        <div class="socialAndMaps">
+            <div id="googleMap" style="width:100%;height:600px;">
+    
+            </div>
+            <div class="social">
+    
+            </div>
+        </div>
+    
+        <!--Svaner-->
+        <div style="height: 1px; margin-top:-1px;" id="svaner"></div>
+        <div class="box">
+            <div class="lazy" id="imageTextIMG" data-src="./Media/images/svaner.jpg"></div>
+            <div class="textbox">
+                <h1 id="imageTextH1">Svaner og Cykelbåde</h1>
+                <p id="imageTextP">
                     De fleste af vores gæster husker os for vores unikke placering, men også den sjove mulighed vi tilbyder,
                     ved at man kan bruge vores “vandcykler”.
                     <br>
@@ -192,34 +185,36 @@
                         </div>
                     </a>
                 </div>
-            </p>
+            </div>
         </div>
-    </div>
-
-    <!--Festlokaler-->
-    <div class="box">
-        <div class="textbox">
-            <h1 id="imageTextH1">Festlokaler</h1>
-            <p id="imageTextP">
-                Vi kan også tilbyde dig at holde dit næste familiearrangement, højtidelighed eller firmaarrangementer
-                for den sags skyld hvis du ønsker.
-                <br>
-                I vores festlokale har vi plads til lidt over 60 gæster, og det er tilgængeligt hele året rundt.
-                Efter aftale med vores dygtige køkkenchef kan vi servere det mad i har lyst til.
-                <br>
-                <br>
-
-                Kontakt os på denne mail: festlokaler@kaffesalonen.dk
-            </p>
+        <div class="boxPhone">
+            <div class="lazy" id="imageTextIMG" data-src="./Media/images/svaner.jpg"></div>
+            <div class="textbox">
+                <h1 id="imageTextH1">Svaner og Cykelbåde</h1>
+                <p id="imageTextP">
+                        De fleste af vores gæster husker os for vores unikke placering, men også den sjove mulighed vi tilbyder,
+                        ved at man kan bruge vores “vandcykler”.
+                        <br>
+                        <br>
+                        Hvis i er et selskab på 4 eller mere, så book jeres vandcykel her: booking@kaffesalonen.dk</p>
+        
+        
+                    <div class="boatPricesContainer">
+                        <a onclick="openBoatNav()">
+                            <div class="bookTableButton">
+                                Priser
+                            </div>
+                        </a>
+                    </div>
+                </p>
+            </div>
         </div>
-        <div class="imageTextIMG" style="background-image: url('./Media/images/festlokaler.jpg');"></div>
-    </div>
-
-    <div class="boxPhone">
-        <div class="imageTextIMG" style="background-image: url('./Media/images/festlokaler.jpg');"></div>
-        <div class="textbox">
-            <h1 id="imageTextH1">Festlokaler</h1>
-            <p id="imageTextP">
+    
+        <!--Festlokaler-->
+        <div class="box">
+            <div class="textbox">
+                <h1 id="imageTextH1">Festlokaler</h1>
+                <p id="imageTextP">
                     Vi kan også tilbyde dig at holde dit næste familiearrangement, højtidelighed eller firmaarrangementer
                     for den sags skyld hvis du ønsker.
                     <br>
@@ -229,35 +224,36 @@
                     <br>
     
                     Kontakt os på denne mail: festlokaler@kaffesalonen.dk
-            </p>
+                </p>
+            </div>
+            <div class="lazy" id="imageTextIMG" data-src="./Media/images/festlokaler.jpg"></div>
         </div>
-    </div>
-
-
-    <!--Job-->
-    <div class="box">
-        <div class="imageTextIMG" style="background-image: url('./Media/images/job.jpg');"></div>
-        <div class="textbox">
-            <h1 id="imageTextH1">Job</h1>
-            <p id="imageTextP">
-                På Københavns mest unikke placering hvor du kan nyde lækker mad og drikke eller prøve vores sjove
-                vandcykler, søger vi altid de bedst egnede personer, der er sultne efter at give en rar service til
-                vores fantastiske gæster.
-                <br>
-                <br>
-
-                Du får en god og grundig oplæring hos os.
-                <br>
-                <br>
-                Kontakt os på: job@kaffesalonen.dk 
-            </p>
+    
+        <div class="boxPhone">
+            <div class="lazy" id="imageTextIMG" data-src="./Media/images/festlokaler.jpg"></div>
+            <div class="textbox">
+                <h1 id="imageTextH1">Festlokaler</h1>
+                <p id="imageTextP">
+                        Vi kan også tilbyde dig at holde dit næste familiearrangement, højtidelighed eller firmaarrangementer
+                        for den sags skyld hvis du ønsker.
+                        <br>
+                        I vores festlokale har vi plads til lidt over 60 gæster, og det er tilgængeligt hele året rundt.
+                        Efter aftale med vores dygtige køkkenchef kan vi servere det mad i har lyst til.
+                        <br>
+                        <br>
+        
+                        Kontakt os på denne mail: festlokaler@kaffesalonen.dk
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="boxPhone">
-        <div class="imageTextIMG" style="background-image: url('./Media/images/job.jpg');"></div>
-        <div class="textbox">
-            <h1 id="imageTextH1">Job</h1>
-            <p id="imageTextP">
+    
+    
+        <!--Job-->
+        <div class="box">
+            <div class="lazy" id="imageTextIMG" data-src="./Media/images/job.jpg"></div>
+            <div class="textbox">
+                <h1 id="imageTextH1">Job</h1>
+                <p id="imageTextP">
                     På Københavns mest unikke placering hvor du kan nyde lækker mad og drikke eller prøve vores sjove
                     vandcykler, søger vi altid de bedst egnede personer, der er sultne efter at give en rar service til
                     vores fantastiske gæster.
@@ -268,19 +264,37 @@
                     <br>
                     <br>
                     Kontakt os på: job@kaffesalonen.dk 
-            </p>
-        </div>
-    </div>
-    <!--To top button-->
-
-    <div class="bookTableElement">
-        <a onclick="openTableNav()">
-            <div class="bookTableButton">
-                Book table
+                </p>
             </div>
-        </a>
-    </div>
-
+        </div>
+        <div class="boxPhone">
+            <div class="lazy" id="imageTextIMG" data-src="./Media/images/job.jpg"></div>
+            <div class="textbox">
+                <h1 id="imageTextH1">Job</h1>
+                <p id="imageTextP">
+                        På Københavns mest unikke placering hvor du kan nyde lækker mad og drikke eller prøve vores sjove
+                        vandcykler, søger vi altid de bedst egnede personer, der er sultne efter at give en rar service til
+                        vores fantastiske gæster.
+                        <br>
+                        <br>
+        
+                        Du får en god og grundig oplæring hos os.
+                        <br>
+                        <br>
+                        Kontakt os på: job@kaffesalonen.dk 
+                </p>
+            </div>
+        </div>
+        <!--To top button-->
+    
+        <div class="bookTableElement">
+            <a onclick="openTableNav()">
+                <div class="bookTableButton">
+                    Book bord
+                </div>
+            </a>
+        </div>
+    
 
     <!--footer-->
     <div style="height: 1px; margin-top:-1px;" id="kontakt"></div>
