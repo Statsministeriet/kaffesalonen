@@ -307,6 +307,9 @@
     width:100%;
     text-align: center;
 }
+.bookTableButton:hover{
+    background-color: white;
+}
 
 
 /* Book bord knap*/
@@ -447,9 +450,11 @@
 .boatPricesContainer{
     height: 10px;
     display: table;
-    margin-left: 10px;
+    margin-left: 5%;
     margin-top:-100px;
+    
 }
+
 
 .boatPriceses{
     text-align: center;

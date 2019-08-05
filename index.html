@@ -108,6 +108,14 @@
                 <br>
                 Kaffen er leveret fra en lokal colombiansk kaffebonde, som sikrer du får én af de bedste
                 kaffesmagsnuancer i København.
+                </p>
+                <div class="boatPricesContainer">
+                        <a onclick="openCoffeNav()">
+                            <div class="bookTableButton">
+                                Læs mere her
+                            </div>
+                        </a>
+                </div>
         </div>
     </div>
 
@@ -120,8 +128,14 @@
                 Vi har et erfarent køkken, der kan lave mange klassiske cafe-retter, som serveres i København.
                 <br>
                 <br>
-                Kaffen er leveret fra en lokal colombiansk kaffebonde, som sikrer du får én af de bedste
-                kaffesmagsnuancer i København. </p>
+                Kaffen er leveret fra en lokal colombiansk kaffebonde.</p>
+                <div class="boatPricesContainer" style="padding-bottom: 20px">
+                        <a onclick="openCoffeNav()">
+                            <div class="bookTableButton">
+                                Læs om kaffen her her
+                            </div>
+                        </a>
+                </div>
         </div>
     </div>
 
@@ -356,8 +370,17 @@
 
             </p>
         </div>
-        </iframe>
     </div>
+
+    <div id="seeCoffeTab" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeCoffeNav()">&times;</a>
+            <div class="boatPriceses">
+                <h1>Fantastisk kaffe fra columbia</h1>
+                <p>Kaffen er leveret fra en lokal colombiansk kaffebonde, som sikrer du får én af de bedste kaffesmagsnuancer i København.
+                </p>
+                <img src="./Media/images/novideo.png" style="height: 250px; width:auto"/>
+            </div>
+        </div>
 
 
     <script>
@@ -378,6 +401,17 @@
             document.getElementById("seeCykleBoatPrices").style.height = "0%";
         }
     </script>
+
+    <script>
+        function openCoffeNav() {
+            document.getElementById("seeCoffeTab").style.height = "100%";
+        }
+
+        function closeCoffeNav() {
+            document.getElementById("seeCoffeTab").style.height = "0%";
+        }
+    </script>
+
     <script>
         function myFunction() {
             var x = document.getElementById("myTopnav");
