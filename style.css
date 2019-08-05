@@ -97,7 +97,7 @@
         z-index: -1;
     }
     .videoContainer video{
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
     .videoContainerMobile{
@@ -116,7 +116,7 @@
         z-index: -1;
     }
     .videoContainerMobile img {
-        width:100%;
+        max-width:100%;
     }
     .videoContainer{
         display: none;
