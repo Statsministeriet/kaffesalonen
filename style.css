@@ -255,6 +255,15 @@
     color: #50514f;
 }
 
+.boxPhone p {
+    padding-bottom: 20px;
+}
+
+.boxPhone h1 {
+    padding-top: 10px;
+}
+
+
 .textbox h1{
     padding-left:5%;
     padding-right:5%;
