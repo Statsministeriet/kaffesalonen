@@ -85,14 +85,45 @@
 
 /*Front page*/
 
-.videoContainer{
-    width: 100%;
-    overflow:hidden;
-    display:block;
-    height: 650px;
-    position: absolute;
-    z-index: -1;
+
+@media screen and (min-width: 950px) {
+    .videoContainer{
+        width:100%;
+        height: auto;
+        overflow:hidden;
+        display:block;
+        height: 650px;
+        position: absolute;
+        z-index: -1;
+    }
+    .videoContainer video{
+        width: 100%;
+        height: auto;
+    }
+    .videoContainerMobile{
+        display: none;
+    }
+
 }
+@media screen and (max-width: 950px) {
+    .videoContainerMobile{
+        width:100%;
+        height: auto;
+        overflow:hidden;
+        display:block;
+        height: 650px;
+        position: absolute;
+        z-index: -1;
+    }
+    .videoContainerMobile img {
+        width:100%;
+    }
+    .videoContainer{
+        display: none;
+    }
+}
+
+
 .backgroundVideo{
     width: 100%;
     
