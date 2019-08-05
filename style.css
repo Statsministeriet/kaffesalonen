@@ -144,7 +144,7 @@
     background-color: #fdffff;
 }
 
-.foodAndDrinksContainer{
+#foodAndDrinksContainer{
     height: 250px;
     width: 80%;
     margin-left:10%;
@@ -192,7 +192,7 @@
     .textbox{
         width: 50%;
     }
-    .imageTextIMG{
+    #imageTextIMG{
         width: 50%;
     }
     .boxPhone{
@@ -207,7 +207,7 @@
         padding:0px;
         background-color: #FFF69F;
     }
-    .imageTextIMG{
+    #imageTextIMG{
         margin-bottom:-22px;
         margin-top: -16px;
         padding:0px;
@@ -235,7 +235,7 @@
 }
 
 
-.imageTextIMG{
+#imageTextIMG{
   /* The image used */
 
   /* Full height */
